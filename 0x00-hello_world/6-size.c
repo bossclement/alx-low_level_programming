@@ -9,7 +9,7 @@
  *
  */
 
-int main() 
+int main(void) 
 {
     printf("Size of char: %zu byte\n", sizeof(char));
     printf("Size of int: %zu bytes\n", sizeof(int));
