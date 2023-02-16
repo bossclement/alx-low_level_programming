@@ -8,6 +8,10 @@
 
 int main(void)
 {
-	fputs("and that piece of art is useful\" - Dora Korpar, 2015-10-19\n", stderr);
+	char first[] = "and that piece of art is useful\"";
+	char second[] = "Dora Korpar, 2015-10-19\n";
+	char buffer[100];
+	sprintf(buffer, "%s - %s", first, second);
+	fputs(buffer, stderr);
 	return (1);
 }
