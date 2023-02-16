@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-/*
+/**
  * main - my main function
  *
  * Description: this prints some string
