@@ -22,8 +22,11 @@ int main(void)
 			{
 				putchar(num1);
 				putchar(num2);
-				putchar(',');
-				putchar(' ');
+				if (num1 != 57)
+				{
+					putchar(',');
+					putchar(' ')
+				}
 			}
 
 		}
