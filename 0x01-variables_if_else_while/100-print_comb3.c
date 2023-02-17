@@ -9,7 +9,7 @@
  * Description: append numbers
  * Return: zero
  */
-int append_nums(int a, int b);
+char append_nums(int a, int b);
 
 
 /**
@@ -51,7 +51,7 @@ int main(void)
  * Return: zero
  */
 
-int append_nums(int a, int b)
+char append_nums(int a, int b)
 {
 	char stra[20];
 
