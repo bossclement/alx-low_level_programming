@@ -19,7 +19,7 @@ int main(void)
 			putchar(num1);
 			putchar(num2);
 			putchar(',');
-			putchat(' ');
+			putchar(' ');
 		}
 	}
 	return (0);
