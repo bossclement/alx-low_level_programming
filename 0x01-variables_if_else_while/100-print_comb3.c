@@ -27,7 +27,7 @@ int main(void)
 	{
 		for (num2 = 48; num2 <= 57; num2++)
 		{
-			if (append_nums(a, b) < append_nums(b, a))
+			if (append_nums(num1, num2) < append_nums(num2, num1))
 			{
 				putchar(num1);
 				putchar(num2);
