@@ -12,7 +12,7 @@ int main(void)
 
 	int count;
 
-	for (count = 0; n <= 16; n++)
+	for (count = 0; count <= 16; count++)
 	{
 		putchar(n[count]);
 	}
