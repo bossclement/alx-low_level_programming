@@ -14,36 +14,20 @@ int main(void)
 
 	int num2;
 
-	int num3;
-
-	int num4;
-
 	for (num1 = 48; num1 <= 57; num1++)
 	{
 		for (num2 = 48; num2 <= 57; num2++)
 		{
-			for (num3 = 48; num3 <= 57; num3++)
+			putchar(i / 10 + '0');
+			putchar(i % 10 + '0');
+			putchar(' ');
+			putchar(j / 10 + '0');
+			putchar(j % 10 + '0');
+			if (i != 99 || j != 99)
 			{
-				for (num4 = 48; num4 <= 57; num4++)
-				{
-					if ((num1 - num2) < 0 || (num3 - num4) < 0)
-					{
-
-						putchar(num1);
-						putchar(num2);
-						putchar(' ');
-						putchar(num3);
-						putchar(num4);
-
-						if (num1 != 57 || num2 != 56 || num3 != 57 || num4 != 57)
-						{
-							putchar(',');
-							putchar(' ');
-						}
-					}
-				}
+				putchar(',');
+				putchar(' ');
 			}
-
 		}
 	}
 	putchar('\n');
