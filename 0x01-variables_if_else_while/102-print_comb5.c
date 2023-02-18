@@ -10,13 +10,13 @@
 
 int main(void)
 {
-	int num1;
+	int i;
 
-	int num2;
+	int j;
 
-	for (num1 = 48; num1 <= 57; num1++)
+	for (i = 0; i < 100; i++)
 	{
-		for (num2 = 48; num2 <= 57; num2++)
+		for (j = i; j < 100; j++)
 		{
 			putchar(i / 10 + '0');
 			putchar(i % 10 + '0');
