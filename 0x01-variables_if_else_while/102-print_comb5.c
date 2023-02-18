@@ -26,7 +26,7 @@ int main(void)
 			{
 				for (num4 = 48; num4 <= 57; num4++)
 				{
-					if ((num1 - num2) > 0 && (num3 - num4) > 0)
+					if ((num1 - num2) < 0 || (num3 - num4) < 0)
 					{
 
 						putchar(num1);
@@ -34,6 +34,7 @@ int main(void)
 						putchar(' ');
 						putchar(num3);
 						putchar(num4);
+
 						if (num1 != 57 || num2 != 56 || num3 != 57 || num4 != 57)
 						{
 							putchar(',');
