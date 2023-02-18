@@ -26,7 +26,7 @@ int main(void)
 			{
 				for (num4 = 48; num4 <= 57; num4++)
 				{
-					if ((num1 + num2) < (num3 + num4))
+					if ((num1 - num2) > 0 && (num3 - num4) > 0)
 					{
 
 						putchar(num1);
