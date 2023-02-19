@@ -1,42 +1,44 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-
+#include <unistd.h>
 /**
- * main - my main
- * Description: hello
- * Return: yesss
+ * main - My main function
+ * Description: description
+ * Return: returns 0
  */
-
 int main(void)
 {
-	int first1, first2, second1, second2;
+	int c, i, k, j;
 
-	for (first1 = 48; first1 <= 57; first1++)
+	for (c = 48; c <= 57; c++)
 	{
-		for (first2 = 48; first2 <= 57; first2++)
+		for (i = 48; i <= 57; i++)
 		{
-			for (second1 = 48; second1 <= 57; second1++)
+			for (k = 48; k <= 57; k++)
 			{
-				for (second2 = 48; second2 <= 57; second2++)
+				for (j = 48; j <= 57; j++)
 				{
-					if (first1 + first2 <= second1 + second2)
+				if (((k + j) > (c + i) &&  k >= c) || c < k)
+				{
+					putchar(c);
+					putchar(i);
+					putchar(' ');
+					putchar(k);
+					putchar(j);
+
+					if (c + i + k + j == 227 && c == 57)
 					{
-						putchar(first1);
-						putchar(first2);
-						putchar(' ');
-						putchar(second1);
-						putchar(second2);
-						if (first1 != 57 || first2 != 56 || second1 != 57 || second2 != 57)
-						{
-							putchar(',');
-							putchar(' ');
-						}
+					break;
+					}
+					else
+					{
+					putchar(',');
+					putchar(' ');
 					}
 				}
-			}	
+				}
+			}
 		}
 	}
-
+	putchar('\n');
 	return (0);
 }
