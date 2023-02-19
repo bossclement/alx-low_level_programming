@@ -10,22 +10,33 @@
 
 int main(void)
 {
-	int i;
+	int first1, first2, second1, second2;
 
-	int j;
-
-	for (i = 0; i < 100; i++)
+	for (first1 = 48; first1 <= 57; first1++)
 	{
-		putchar(i / 10 + '0');
-		putchar(i % 10 + '0');
-		putchar(' ');
-		putchar(j / 10 + '0');
-		putchar(j % 10 + '0');
-		if (i != 99 || j != 99)
+		for (first2 = 48; first2 <= 57; first2++)
 		{
-			putchar(',');
-			putchar(' ');
+			for (second1 = 48; second1 <= 57; second1++)
+			{
+				for (second2 = 48; second2 <= 57; second2++)
+				{
+					if (first1 + first2 != second1 + second2)
+					{
+						putchar(first1);
+						putchar(first2);
+						putchar(' ');
+						putchar(second1);
+						putchar(second2);
+						if (first1 != 57 || first2 != 56 || second1 != 57 || second2 != 57)
+						{
+							putchar(',');
+							putchar(' ');
+						}
+					}
+				}
+			}	
 		}
 	}
+
 	return (0);
 }
