@@ -20,7 +20,7 @@ int main(void)
 			{
 				for (second2 = 48; second2 <= 57; second2++)
 				{
-					if (first1 + first2 != second1 + second2)
+					if (first1 + first2 < second1 + second2)
 					{
 						putchar(first1);
 						putchar(first2);
