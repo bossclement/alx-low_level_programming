@@ -22,7 +22,8 @@ void print_alphabet(void)
  * Return: 0
  */
 
-void main(void)
+int main(void)
 {
 	print_alphabet();
+	return (0);
 }
