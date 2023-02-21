@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * main - main fuction
+ * print_alphabet - main fuction
  * Description: my description
  * Return: 0
  */
 
-int main(void)
+void print_alphabet(void)
 {
 	char c;
 
