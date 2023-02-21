@@ -42,7 +42,7 @@ void jack_bauer(void)
 			if (num2 < 10)
 			{
 				_putchar('0');
-				_putchar(num2 + '0')
+				_putchar(num2 + '0');
 			} else
 			{
 				_putchar(get_first_digit(num2) + '0');
