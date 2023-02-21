@@ -7,7 +7,7 @@
  * Return: 0
  */
 
-int jack_bauer(int n)
+void jack_bauer(void)
 {
 	int num1, num2;
 
