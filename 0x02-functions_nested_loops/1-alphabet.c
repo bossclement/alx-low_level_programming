@@ -15,15 +15,3 @@ void print_alphabet(void)
 		_putchar(c);
 	}
 }
-
-/**
- * main - main func
- * Description: blablabla
- * Return: 0
- */
-
-int main(void)
-{
-	print_alphabet();
-	return (0);
-}
