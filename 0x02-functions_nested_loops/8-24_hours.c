@@ -46,7 +46,7 @@ void jack_bauer(void)
 			} else
 			{
 				_putchar(get_first_digit(num2) + '0');
-				_putchar(num2 % 10 + '0')
+				_putchar(num2 % 10 + '0');
 			}
 			_putchar('\n');
 		}
