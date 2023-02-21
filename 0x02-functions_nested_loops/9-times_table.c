@@ -27,7 +27,7 @@ void times_table(void)
 			if (index < 9)
 			{
 				_putchar(',');
-				if (first_num == 0)
+				if ((index + 1) * ref < 10)
 				{
 					_putchar(' ');
 				}
