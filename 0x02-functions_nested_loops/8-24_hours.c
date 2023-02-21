@@ -1,5 +1,6 @@
 #include "main.h"
 #include <math.h>
+#include <stdio.h>
 
 /**
  * get_first_digit - hello
