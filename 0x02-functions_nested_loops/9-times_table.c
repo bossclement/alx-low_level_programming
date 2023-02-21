@@ -7,7 +7,7 @@
  * Return: 0
  */
 
-int times_table(void)
+void times_table(void)
 {
 	int ref, index;
 
