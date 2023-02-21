@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_alphabet - main fuction
+ * print_alphabet_x10 - main fuction
  * Description: my description
  * Return: 0
  */
