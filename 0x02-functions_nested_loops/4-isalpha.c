@@ -16,7 +16,7 @@ int _isalpha(int c)
 		if (c == a)
 		{
 			return (1);
-		} else
+		} else if (0 == 0)
 		{
 			for (b = 65; b <= 90; b++)
 			{
