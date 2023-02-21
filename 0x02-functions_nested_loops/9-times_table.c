@@ -19,7 +19,7 @@ void times_table(void)
 
 			int first_num = (num - (num % 10)) / 10;
 
-			if (first_num != 10)
+			if (first_num != 0)
 			{
 				_putchar(first_num + '0');
 			}
