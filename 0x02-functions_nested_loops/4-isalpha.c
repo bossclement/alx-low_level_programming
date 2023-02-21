@@ -7,9 +7,9 @@
  * Return: 0
  */
 
-int _islower(int c)
+int _isalpha(int c)
 {
-	int a,b;
+	int a, b;
 
 	for (a = 97; a <= 122; a++)
 	{
@@ -22,7 +22,7 @@ int _islower(int c)
 			{
 				if (c == b)
 				{
-					return(1);
+					return (1);
 				}
 			}
 		}
