@@ -8,6 +8,10 @@
  * Return: 0
  */
 
+
+
+
+
 void print_times_table(int n)
 {
 	int ref, index;
@@ -19,7 +23,7 @@ void print_times_table(int n)
 
 	for (ref = 0; ref <= n; ref++)
 	{
-		for (index = 0; index <= 9; index++)
+		for (index = 0; index <= n; index++)
 		{
 			int  num = index * ref;
 
