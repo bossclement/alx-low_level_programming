@@ -10,7 +10,7 @@ int main(void)
 {
 	int i;
 	int res;
-	int old_cur;
+	int old_cur = 0;
 	int prev = 1;
 	int cur = 2;
 
