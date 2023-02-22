@@ -21,7 +21,7 @@ int main(void)
 			res += cur;
 		}
 		old_cur = cur;
-		cur += prev;
+		cur = cur + prev;
 		prev = old_cur;
 	}
 	printf("%ld\n", res);
