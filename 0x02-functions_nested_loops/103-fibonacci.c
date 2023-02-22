@@ -8,9 +8,9 @@
 
 int main(void)
 {
-	long long int i, res, old_cur;
-	long long int prev = 1;
-	long long int cur = 2;
+	long int i, res, old_cur;
+	long int prev = 1;
+	long int cur = 2;
 
 	for (i = 1; i < 4000000; i++)
 	{
