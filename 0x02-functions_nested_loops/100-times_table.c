@@ -2,10 +2,11 @@
 #include "main.h"
 
 /**
- * times_table - main fuction
- * @n: nice
+ * do_work - main fuction
+ * @index: nice
+ * @num: nice
  * Description: my description
- * Return: 0
+ * Return: void
  */
 
 void do_work(int index, int num)
