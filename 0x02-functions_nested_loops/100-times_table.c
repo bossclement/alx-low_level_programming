@@ -10,7 +10,7 @@
  * Return: void
  */
 
-void do_work(int index, int num, int n)
+void do_work(int index, int num, int n, int ref)
 {
 	if (num < 100)
 	{
@@ -81,7 +81,7 @@ void print_times_table(int n)
 				_putchar(first_num + '0');
 			}
 			
-			do_work(index, num, n);
+			do_work(index, num, n, ref);
 			
 		}
 		_putchar('\n');
