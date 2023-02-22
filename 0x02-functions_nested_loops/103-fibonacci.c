@@ -10,7 +10,7 @@ int main(void)
 {
 	int i;
 	int res;
-	int old_cur = 0;
+	int old_cur;
 	int prev = 1;
 	int cur = 2;
 
@@ -22,7 +22,7 @@ int main(void)
 		}
 		old_cur = cur;
 		cur += prev;
-		prev = cur;
+		prev = old_cur;
 	}
 	printf("%d\n", res);
 	return (0);
