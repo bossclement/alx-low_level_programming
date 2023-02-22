@@ -48,9 +48,9 @@ void print_times_table(int n)
 			}
 			if (index < n)
 			{
-				_putchar(',');
 				int to_come = (index + 1) * ref;
-
+				
+				_putchar(',');
 				if (to_come < 10)
 				{
 					_putchar(' ');
