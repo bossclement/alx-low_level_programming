@@ -59,14 +59,8 @@ void print_times_table(int n)
 				{
 					_putchar(' ');
 				}
-				if (n > 9 && to_come < 100)
-				{
-					_putchar(' ');
-					_putchar(' ');
-				} else
-				{
-					_putchar(' ');
-				}
+				_putchar(' ');
+				_putchar(' ');
 			}
 		}
 		_putchar('\n');
