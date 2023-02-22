@@ -23,5 +23,5 @@ int main(void)
 		prev = old_cur;
 	}
 	printf("%d\n", 4613732);
-	return (1);
+	return (0);
 }
