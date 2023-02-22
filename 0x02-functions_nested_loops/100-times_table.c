@@ -5,11 +5,12 @@
  * do_work - main fuction
  * @index: nice
  * @num: nice
+ * @n: hello
  * Description: my description
  * Return: void
  */
 
-void do_work(int index, int num)
+void do_work(int index, int num, int n)
 {
 	if (num < 100)
 	{
@@ -80,7 +81,7 @@ void print_times_table(int n)
 				_putchar(first_num + '0');
 			}
 			
-			do_work(index, num);
+			do_work(index, num, n);
 			
 		}
 		_putchar('\n');
