@@ -8,11 +8,11 @@
 
 int main(void)
 {
-	int i;
-	int res;
-	int old_cur;
-	int prev = 1;
-	int cur = 2;
+	long int i;
+	long int res;
+	long int old_cur;
+	long int prev = 1;
+	long int cur = 2;
 
 	for (i = 1; i < 4000000; i++)
 	{
