@@ -80,9 +80,7 @@ void print_times_table(int n)
 			{
 				_putchar(first_num + '0');
 			}
-			
 			do_work(index, num, n, ref);
-			
 		}
 		_putchar('\n');
 	}
