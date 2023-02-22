@@ -20,8 +20,8 @@ int main(void)
 		}
 		old_cur = cur;
 		cur += prev;
-		prev = old_cur;
+		prev = cur;
 	}
-	printf("%d\n", 4613732);
+	printf("%d\n", res);
 	return (0);
 }
