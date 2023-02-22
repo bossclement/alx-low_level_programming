@@ -8,9 +8,9 @@
 
 int main(void)
 {
-	long int i, res, old_cur;
-	long int prev = 1;
-	long int cur = 2;
+	int i, res, old_cur;
+	int prev = 1;
+	int cur = 2;
 
 	for (i = 1; i < 4000000; i++)
 	{
@@ -22,6 +22,6 @@ int main(void)
 		cur += prev;
 		prev = old_cur;
 	}
-	printf("%ld\n", res);
+	printf("%d\n", res);
 	return (1);
 }
