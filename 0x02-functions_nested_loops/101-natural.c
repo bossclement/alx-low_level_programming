@@ -9,7 +9,6 @@
 int main(void)
 {
 	long int i;
-	
 	long int res;
 
 	for (i = 0; i < 1024; i++)
