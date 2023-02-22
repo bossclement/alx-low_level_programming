@@ -30,7 +30,7 @@ void print_times_table(int n)
 				first_num = (num - (num % 10)) / 10;
 			} else
 			{
-				int first_num = (num - (num % 100)) / 100;
+				first_num = (num - (num % 100)) / 100;
 			}
 
 			if (first_num != 0)
@@ -44,12 +44,13 @@ void print_times_table(int n)
 			} else
 			{
 				_putchar((((num % 100) - ((num % 100) % 10)) / 10) + '0');
-				_putchar(num % 10 + '0')
+				_putchar(num % 10 + '0');
 			}
 			if (index < n)
 			{
 				_putchar(',');
 				int to_come = (index + 1) * ref;
+
 				if (to_come < 10)
 				{
 					_putchar(' ');
