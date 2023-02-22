@@ -6,6 +6,7 @@
  * @index: nice
  * @num: nice
  * @n: hello
+ * @ref: blabla
  * Description: my description
  * Return: void
  */
@@ -41,15 +42,11 @@ void do_work(int index, int num, int n, int ref)
 }
 
 /**
- * times_table - main fuction
+ * print_times_table - main fuction
  * @n: nice
  * Description: my description
  * Return: 0
  */
-
-
-
-
 
 void print_times_table(int n)
 {
