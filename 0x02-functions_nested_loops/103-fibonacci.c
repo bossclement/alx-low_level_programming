@@ -24,6 +24,6 @@ int main(void)
 		cur += prev;
 		prev = old_cur;
 	}
-	printf("%d\n", res);
+	printf("%ld\n", res);
 	return (0);
 }
