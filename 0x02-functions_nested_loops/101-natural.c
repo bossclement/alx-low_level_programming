@@ -8,7 +8,7 @@
 
 int main(void)
 {
-	long long int i, long long int res;
+	long int i, long int res;
 
 	for (i = 0; i < 1024; i++)
 	{
