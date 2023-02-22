@@ -8,7 +8,9 @@
 
 int main(void)
 {
-	int i, res, old_cur;
+	int i;
+	int res;
+	int old_cur;
 	int prev = 1;
 	int cur = 2;
 
