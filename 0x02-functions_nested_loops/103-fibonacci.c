@@ -1,26 +1,22 @@
 #include <stdio.h>
-
 /**
- * main - main fuction
- * Description: my description
+ * main - hello
+ * Description: world
  * Return: 0
  */
-
 int main(void)
 {
-	int prev = 1;
-	int cur = 2;
-	int old_cur;
+	int a = 0, b = 1, x = 0;
+	int m = 0;
 
-	for (cur = 1; cur < 4000000; cur++)
+	while (x < 4000000)
 	{
-		old_cur = cur;
-		if (prev % 2 == 0)
-		{
-			cur += prev;
-		}
-		prev = old_cur;
+		x = a + b;
+		a = b;
+		b = x;
+		if (x % 2 == 0)
+			m += x;
 	}
-	printf("%ld\n", res);
+	printf("%i\n", m);
 	return (0);
 }
