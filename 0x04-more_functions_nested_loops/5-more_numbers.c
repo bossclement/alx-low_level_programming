@@ -1,7 +1,7 @@
 # include "main.h"
 
 /**
- * more_numers- my func
+ * more_numbers- my func
  * Description: hello
  * Returns: number
  */
@@ -15,6 +15,7 @@ void more_numbers(void)
 		for (i = 0; i <= 14; i++)
 		{
 			int num = i;
+
 			if (i >= 10)
 			{
 				_putchar('1');
