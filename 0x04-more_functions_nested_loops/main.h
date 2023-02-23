@@ -1,3 +1,3 @@
-#include "1-isdigit.c"
-#include "0-isupper.c"
-#include "_putchar.c"
+int _putchar(char c);
+int _isupper(int c);
+int _isdigit(int c);

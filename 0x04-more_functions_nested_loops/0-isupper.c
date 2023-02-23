@@ -1,3 +1,5 @@
+#include "main.h"
+
 /**
  * _isupper - my function
  * @c: arguments
