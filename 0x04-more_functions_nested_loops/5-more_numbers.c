@@ -25,6 +25,9 @@ first_num  = '1';
 _putchar(first_num);
 _putchar(second_num + '0');
 }
+if (i != 9)
+{
 _putchar('\n');
+}
 }
 }
