@@ -18,7 +18,7 @@ for (c = 0; c <= 14; c++)
 {
 int first_num = '\0';
 int second_num = c % 10;
-if (c > 10)
+if (c >= 10)
 {
 first_num  = '1';
 }
