@@ -1,33 +1,27 @@
-#include "main.h"
+# include "main.h"
 
 /**
- * more_numbers - my function
- * Description: the description
- * Return: hello
+ * more_numers- my func
+ * Description: hello
+ * Returns: number
  */
 
 void more_numbers(void)
 {
-int c;
+	int i, c;
 
-int i;
-
-for (i = 0; i < 10; i++)
-{
-for (c = 0; c <= 14; c++)
-{
-int first_num = '\0';
-int second_num = c % 10;
-if (c >= 10)
-{
-first_num  = '1';
-}
-_putchar(first_num);
-_putchar(second_num + '0');
-}
-if (i != 9)
-{
-_putchar('\n');
-}
-}
+	for (c = 0; c < 10; c++)
+	{
+		for (i = 0; i <= 14; i++)
+		{
+			int num = i;
+			if (i >= 10)
+			{
+				_putchar('1');
+				num = i % 10;
+			}
+			_putchar(num + '0');
+		}
+		_putchar('\n');
+	}
 }
