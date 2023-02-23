@@ -1,5 +1,5 @@
 /**
- * _isupper - my function
+ * _isdigit - my function
  * @c: arguments
  * Description: the description
  * Return: hello
@@ -13,7 +13,7 @@ int _isdigit(int c)
 	{
 		if (c == i)
 		{
-			return (1);
+			return(1);
 		}
 	}
 	return (0);
