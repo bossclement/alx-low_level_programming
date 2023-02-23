@@ -8,20 +8,17 @@
 
 int main(void)
 {
-	long int i;
-	long int res;
-	long int old_cur;
-	long int prev = 1;
-	long int cur = 2;
+	int prev = 1;
+	int cur = 2;
+	int old_cur;
 
-	for (i = 1; i < 4000000; i++)
+	for (cur = 1; cur < 4000000; cur++)
 	{
-		if (cur % 2 == 0)
-		{
-			res += cur;
-		}
 		old_cur = cur;
-		cur = cur + prev;
+		if (prev % 2 == 0)
+		{
+			cur += prev;
+		}
 		prev = old_cur;
 	}
 	printf("%ld\n", res);
