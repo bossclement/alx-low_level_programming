@@ -3,7 +3,7 @@
 /**
  * main - my func
  * Description: Hello
- * Returns: number
+ * Return: number
  */
 
 int main(void)
