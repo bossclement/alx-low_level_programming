@@ -8,7 +8,7 @@
 
 void print_rev(char *s)
 {
-	int length = sizeof(s) / sizeof(char);
+	int length = sizeof(*s) / sizeof(char);
 
 	while (--length)
 	{
