@@ -21,6 +21,7 @@ void rev_string(char *s)
 	{
 		new_string[index] = s[length - 1];
 		index++;
+		length--;
 	}
 	*s = *new_string;
 	_putchar('\n');
