@@ -23,5 +23,11 @@ void rev_string(char *s)
 		index++;
 		length--;
 	}
-	*s = *new_string;
+	index = 0;
+
+	while (new_string[index] != '\0')
+	{
+		s[index] = new_string[index];
+		index++;
+	}
 }
