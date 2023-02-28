@@ -26,10 +26,10 @@ void puts_half(char *str)
 
 	length = length / 2;
 
-	while (length > 0)
+	while (str[length - 1] != '\0')
 	{
 		_putchar(str[length - 1]);
-		length--;
+		length++;
 	}
 	_putchar('\n');
 }
