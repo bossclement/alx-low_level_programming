@@ -40,7 +40,7 @@ char *_strcat(char *dest, char *src)
 char *_strncat(char *dest, char *src, int n)
 {
 	char new_src[1000];
-	long unsigned int count = 0;
+	unsigned int count = 0;
 
 	while (n--)
 	{
