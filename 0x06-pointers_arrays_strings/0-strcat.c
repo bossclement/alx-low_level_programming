@@ -24,4 +24,6 @@ char *_strcat(char *dest, char *src)
 		dest_len++;
 		append_index++;
 	}
+
+	return (dest);
 }
