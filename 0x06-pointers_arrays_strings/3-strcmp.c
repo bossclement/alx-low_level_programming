@@ -12,7 +12,7 @@
 int _strcmp(char *s1, char *s2)
 {
 	int i, s1_value = 0, s2_value = 0;
-	
+
 	while (s2[i++])
 	{
 		s1_value = (int) s1[i];
