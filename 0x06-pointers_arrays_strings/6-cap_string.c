@@ -16,11 +16,47 @@ char *cap_string(char *str)
 	{
 		if ((str[i] >= 'a' && str[i] <= 'z'))
 		{
-			if ((prev_c < 'a' || prev_c > 'z') || (prev_c < 'A' || prev_c > 'Z'))
+			switch (prev_c)
 			{
-				prev_c = str[i];
-				str[i] -= 32;
-				continue;
+				case ' ':
+					str[i] -= 32;
+					break;
+				case '\t':
+					str[i] -= 32;
+					break;
+				case '\n':
+					str[i] -= 32;
+					break;
+				case ',':
+					str[i] -= 32;
+                                        break;
+				case ';':
+					str[i] -= 32;
+					break;
+				case '.':
+					str[i] -= 32;
+					break;
+				case '!':
+					str[i] -= 32;
+					break;
+				case '?':
+					str[i] -= 32;
+					break;
+				case '"':
+					str[i] -= 32;
+					break;
+				case '(':
+					str[i] -= 32;
+					break;
+				case ')':
+					str[i] -= 32;
+					break;
+				case '{':
+					str[i] -= 32;
+					break;
+				case '}':
+					str[i] -= 32;
+					break;
 			}
 		}
 		prev_c = str[i];
