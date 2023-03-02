@@ -14,7 +14,7 @@ char *cap_string(char *str)
 
 	while (str[i++])
 	{
-		if ((str[i] >= 'a' && str[i] <= 'z') && (prev_c == ' ' || prev_c == '\t' || prev_c == '\n'))
+		if ((str[i] >= 'a' && str[i] <= 'z') && ((prev_c < 'a' || prev_c > 'z') || (prev_c < 'A' || prev_c > 'Z')))
 		{
 			prev_c = str[i];
 			str[i] -= 32;
