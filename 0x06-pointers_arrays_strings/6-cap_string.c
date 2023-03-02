@@ -9,57 +9,30 @@
 
 char *cap_string(char *str)
 {
-	int i;
-	char prev_c;
+	int index = 0;
 
-	while (str[i++])
+	while (str[index])
 	{
-		if ((str[i] >= 'a' && str[i] <= 'z'))
-		{
-			switch (prev_c)
-			{
-				case ' ':
-					str[i] -= 32;
-					break;
-				case '\t':
-					str[i] -= 32;
-					break;
-				case '\n':
-					str[i] -= 32;
-					break;
-				case ',':
-					str[i] -= 32;
-                                        break;
-				case ';':
-					str[i] -= 32;
-					break;
-				case '.':
-					str[i] -= 32;
-					break;
-				case '!':
-					str[i] -= 32;
-					break;
-				case '?':
-					str[i] -= 32;
-					break;
-				case '"':
-					str[i] -= 32;
-					break;
-				case '(':
-					str[i] -= 32;
-					break;
-				case ')':
-					str[i] -= 32;
-					break;
-				case '{':
-					str[i] -= 32;
-					break;
-				case '}':
-					str[i] -= 32;
-					break;
-			}
-		}
-		prev_c = str[i];
+		while (!(str[index] >= 'a' && str[index] <= 'z'))
+			index++;
+
+		if (str[index - 1] == ' ' ||
+		    str[index - 1] == '\t' ||
+		    str[index - 1] == '\n' ||
+		    str[index - 1] == ',' ||
+		    str[index - 1] == ';' ||
+		    str[index - 1] == '.' ||
+		    str[index - 1] == '!' ||
+		    str[index - 1] == '?' ||
+		    str[index - 1] == '"' ||
+		    str[index - 1] == '(' ||
+		    str[index - 1] == ')' ||
+		    str[index - 1] == '{' ||
+		    str[index - 1] == '}' ||
+		    index == 0)
+			str[index] -= 32;
+
+		index++;
 	}
 
 	return (str);
