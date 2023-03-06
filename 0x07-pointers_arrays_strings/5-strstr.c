@@ -2,8 +2,8 @@
 
 /**
  * _strstr - function
- * @s: array
- * @accept: array
+ * @haystack: array
+ * @needle: array
  * Description: return string
  * Return: string
  */
