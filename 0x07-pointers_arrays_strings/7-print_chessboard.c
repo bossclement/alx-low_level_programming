@@ -4,7 +4,7 @@
  * print_chessboard - functions that prints chess board
  * @a: parameter
  */
- 
+
 void print_chessboard(char (*a)[8])
 {
 	int indx1, indx2;
