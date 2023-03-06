@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stddef.h>
 
 /**
  * _strchr - function to find a character in an array
@@ -19,5 +18,5 @@ char *_strchr(char *s, char c)
 			return (s + i);
 	}
 
-	return (NULL);
+	return ('\0');
 }
