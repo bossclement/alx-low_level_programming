@@ -76,7 +76,7 @@ char *rev_string(char *string, int length, char *new_string, int index)
 
 int is_palindrome(char *s)
 {
-	char new_str[100] = "";
+	char new_str[100000] = "";
 
 	if (!*s)
 		return (1);
