@@ -11,7 +11,12 @@
 
 int main(int agrc, char *argv[])
 {
+	int i = 0;
+
 	while (agrc--)
-		printf("%s\n", argv[agrc]);
+	{
+		printf("%s\n", argv[i]);
+		i++;
+	}
 	return (0);
 }
