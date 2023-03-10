@@ -1,13 +1,26 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
  * main - prints program file path
  * @agrc: number of arguments
  * @argv: arguments
+ * Description: prints program name
+ * Return: 0
  */
 
 int main(int agrc, char *argv[])
 {
-	printf("%s\n", argv[0]);
+	int i = 0;
+
+	(void)agrc;
+
+	while (argv[0][i])
+	{
+		_putchar(argv[0][i]);
+		i++;
+	}
+
+	_putchar('\n');
+
+	return (0);
 }
