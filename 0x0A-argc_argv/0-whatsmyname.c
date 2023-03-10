@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "main.h"
 
 /**
@@ -8,19 +9,8 @@
  * Return: 0
  */
 
-int main(int agrc, char *argv[])
+int main(__attribute__((unused)) int agrc, char *argv[])
 {
-	int i = 0;
-
-	(void)agrc;
-
-	while (argv[0][i])
-	{
-		_putchar(argv[0][i]);
-		i++;
-	}
-
-	_putchar('\n');
-
+	printf("%s\n", argv[0]);
 	return (0);
 }
