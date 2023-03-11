@@ -11,10 +11,10 @@
 int main(int argc, char *argv[])
 {
 	int i, c;
-	
+
 	int count = 0;
 	int coins[] = {25, 10, 5, 2, 1};
-	
+
 	if (argc != 2)
 	{
 		printf("Error\n");
@@ -28,14 +28,15 @@ int main(int argc, char *argv[])
 
 	else
 	{
-		for (i = 0; i < 4; i++) {
-			while (c >= coins[i]) 
+		for (i = 0; i < 4; i++)
+		{
+			while (c >= coins[i])
 			{
 				c -= coins[i];
-			    	count++;
+				count++;
 			}
 		}
-		
+
 		if (c % 2 != 0)
 			count++;
 		printf("%d\n", count);
