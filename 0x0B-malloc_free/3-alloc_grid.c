@@ -23,7 +23,8 @@ int **alloc_grid(int width, int height)
 		array[h] = (int *)malloc(sizeof(int) * width);
 		if (array[h] == NULL)
 		{
-			free(array);
+			while (*array)
+				free(array++);
 			return (NULL);
 		}
 		for (w = 0; w < width; w++)
