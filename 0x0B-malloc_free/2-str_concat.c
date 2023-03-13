@@ -18,9 +18,9 @@ int get_len(char *str)
 
 
 /**
- * str_concat - function
- * @s1: param 1
- * @s2: param 2
+ * concat - function
+ * @str: param 1
+ * @dest: param 2
  * Return: a pointer
  */
 
