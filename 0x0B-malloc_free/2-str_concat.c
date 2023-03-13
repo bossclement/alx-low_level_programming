@@ -45,7 +45,7 @@ char *concat(char *str, char *dest)
 
 char *str_concat(char *s1, char *s2)
 {
-	char *arrayP = (char *)malloc(get_len(s1) + get_len(s2));
+	char *arrayP = (char *)malloc(get_len(s1) + get_len(s2) + 1);
 
 	if (arrayP == NULL)
 		return (NULL);
