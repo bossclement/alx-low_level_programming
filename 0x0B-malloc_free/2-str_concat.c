@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
  * get_len - function
@@ -10,6 +9,9 @@
 int get_len(char *str)
 {
 	int length = 0;
+
+	if (str == NULL)
+		return (0);
 
 	while (str[length])
 		length++;
