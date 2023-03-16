@@ -1,53 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
 
-int str_len(char *str);
-char *concat_str(char *dest, char *str, int n);
-
-/**
- * str_len - func
- * @dest: param 1
- * @str: param 2
- * @n: param 3
- * Return: pointer
- */
-
-char *concat_str(char *dest, char *str, int n)
-{
-	int dest_len = str_len(dest);
-	int i;
-
-	if (str == NULL)
-		return (dest);
-
-	for (i = 0; i < n; i++)
-	{
-		if (str[i])
-			dest[dest_len + i] = str[i];
-		else
-			break;
-	}
-	return (dest);
-}
-
-/**
- * str_len - func
- * @str: param 1
- * Return: number
- */
-
-int str_len(char *str)
-{
-	int len = 0;
-
-	if (str == NULL)
-		return (0);
-
-	while (str[len])
-		len++;
-	return (len);
-}
-
 /**
  * string_nconcat - func
  * @s1: param 1
@@ -58,14 +11,33 @@ int str_len(char *str)
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *array = (char *)malloc(str_len(s1) + n + 1);
+	char *concat;
+	unsigned int len = n, index;
 
-	if (array == NULL)
+	if (s1 == NULL)
+		s1 = "";
+
+	if (s2 == NULL)
+		s2 = "";
+
+	for (index = 0; s1[index]; index++)
+		len++;
+
+	concat = malloc(sizeof(char) * (len + 1));
+
+	if (concat == NULL)
 		return (NULL);
 
-	array = concat_str(array, s1, str_len(s1));
-	array = concat_str(array, s2, n);
-	array[str_len(array)] = '\0';
+	len = 0;
 
-	return (array);
+	for (index = 0; s1[index]; index++)
+		concat[len++] = s1[index];
+
+	for (index = 0; s2[index] && index < n; index++)
+		concat[len++] = s2[index];
+
+	concat[len] = '\0';
+
+	return (concat);
 }
+
