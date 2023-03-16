@@ -1,6 +1,5 @@
 #include "main.h"
 #include <stdlib.h>
-#include <stdio.h>
 
 int str_len(char *str);
 char *concat_str(char *dest, char *str, int n);
