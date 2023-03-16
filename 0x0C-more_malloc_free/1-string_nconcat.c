@@ -1,6 +1,5 @@
 #include "main.h"
 #include <stdlib.h>
-#include <stddef.h>
 #include <stdio.h>
 
 int str_len(char *str);
@@ -18,6 +17,9 @@ char *concat_str(char *dest, char *str, int n)
 {
 	int dest_len = str_len(dest);
 	int i;
+
+	if (str == NULL)
+		return (dest);
 
 	for (i = 0; i < n; i++)
 	{
@@ -38,6 +40,9 @@ char *concat_str(char *dest, char *str, int n)
 int str_len(char *str)
 {
 	int len = 0;
+
+	if (str == NULL)
+		return (0);
 
 	while (str[len])
 		len++;
