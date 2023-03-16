@@ -59,7 +59,7 @@ int str_len(char *str)
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *array = (char *)malloc(str_len(s1) + str_len(s2) + 1);
+	char *array = (char *)malloc(str_len(s1) + n + 1);
 
 	if (array == NULL)
 		return (NULL);
