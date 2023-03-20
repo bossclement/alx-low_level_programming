@@ -34,6 +34,7 @@ char *strcp(char *dest, char *src)
 	for ( ; i < str_len; i++)
 		dest[i] = src[i];
 
+	dest[i] = '\0';
 	return (dest);
 }
 
