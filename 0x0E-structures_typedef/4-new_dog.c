@@ -14,14 +14,10 @@ int _strlen(char *str)
 {
 	int len = 0;
 
-	if (str != NULL)
-	{
-		while (str[len])
-			len++;
-		return (len);
-	}
+	while (str[len])
+		len++;
 
-	return (0);
+	return (len);
 }
 
 /**
