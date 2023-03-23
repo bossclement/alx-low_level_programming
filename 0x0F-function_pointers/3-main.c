@@ -27,12 +27,11 @@ int main(int argc, char *argv[])
 	while (operator[valid_len])
 		valid_len++;
 
-	if ((operator == (char *)"/" || operator  == (char *)"%") && num2 == 0)
+	if ((*operator == '/' || *operator  == '%') && num2 == 0)
 	{
 		printf("Error\n");
 		exit(100);
-	} else if (valid_len != 1)
-		return (0);
+	}
 
 	operation = get_op_func(operator);
 	if (operation == NULL)
