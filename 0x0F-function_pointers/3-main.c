@@ -10,7 +10,7 @@
 int main(int argc, char *argv[])
 {
 	int (*operation)(int, int);
-	int num1, num2;
+	int num1, num2, valid_len;
 	char *operator;
 
 	if (argc != 4)
@@ -22,6 +22,14 @@ int main(int argc, char *argv[])
 	num1 = atoi(argv[1]);
 	num2 = atoi(argv[3]);
 	operator = argv[2];
+
+	valid_len = 0;
+	while (operator[valid_len])
+		valid_len++;
+
+	if (valid_len != 1)
+		return (0);
+
 	if ((operator == (char *)"/" || operator  == (char *)"%") && num2 == 0)
 	{
 		printf("Error\n");
