@@ -1,6 +1,5 @@
 #include "lists.h"
 #include <stdlib.h>
-#include <stdio.h>
 
 /**
  * free_listint2 - function to clear list of nodes
