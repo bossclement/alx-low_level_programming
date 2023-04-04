@@ -2,7 +2,8 @@
 #include <stdio.h>
 
 /**
- * print_listint - function to print elements in a list
+ * listint_len - function that returns number of nodes
+ *		in a list
  * @h: the list
  * Return: the number of nodes inside the list
  */
