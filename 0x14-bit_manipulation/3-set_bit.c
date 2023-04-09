@@ -93,15 +93,15 @@ void to_bit(unsigned long int n, char *str)
  * set_bit - sets the value of a bit to 1 at a given index.
  * @n: The number
  * @index: Index position of the bit to change
+ * Return: 1 on success -1 on fail
  */
 int set_bit(unsigned long int *n, unsigned int index)
 {
 	char bits_str[100];
 	unsigned int len = 0;
 	unsigned int bits = sizeof(n) * 8, i;
-	i = bits;
-	
 
+	i = bits;
 	if (bits < index)
 		return (-1);
 
@@ -116,7 +116,7 @@ int set_bit(unsigned long int *n, unsigned int index)
 		return (1);
 	} else if (len == 0)
 	{
-		while(bits--)
+		while (bits--)
 		{
 			bits_str[bits] = '0';
 		}
