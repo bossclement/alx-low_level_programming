@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * _pow - Claculates the power
+ * _pow - Caculates the power
  * @a: The base
  * @exponent: The exponent
  * Return: The result of power
