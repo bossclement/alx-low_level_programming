@@ -42,12 +42,15 @@ int get_bit(unsigned long int n, unsigned int index)
 	char bits_str[100];
 	unsigned int len = 0;
 
+	if ((sizeof(n) * 8) < index)
+		return (-1);
+
 	to_bit(n, bits_str);
 	while (bits_str[len])
 		len++;
 	len--;
-	if (bits_str[index] && len >= index)
+	if (bits_str[index])
 		return (bits_str[len - index] - '0');
 	else
-		return (-1);
+		return (0);
 }
