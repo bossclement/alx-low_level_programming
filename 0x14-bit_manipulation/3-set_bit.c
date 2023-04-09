@@ -102,7 +102,7 @@ int set_bit(unsigned long int *n, unsigned int index)
 	unsigned int bits = sizeof(n) * 8, i;
 
 	i = bits;
-	if (bits < index)
+	if (bits <= index)
 		return (-1);
 
 	to_bit(*n, bits_str);
