@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "main.h"
+#include <limits.h>
 
 /**
  * main - check the code
@@ -18,6 +19,9 @@ int main(void)
     printf("%lu\n", n);
     n = 98;
     set_bit(&n, 0);
+    printf("%lu\n", n);
+    n = ULONG_MAX;
+    set_bit(&n, 20);
     printf("%lu\n", n);
     return (0);
 }
