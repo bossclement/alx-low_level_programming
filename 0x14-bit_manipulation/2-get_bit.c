@@ -48,8 +48,6 @@ int get_bit(unsigned long int n, unsigned int index)
 	len--;
 	if (bits_str[index] && len >= index)
 		return (bits_str[len - index] - '0');
-	else if (len == 0)
-		return (0);
 	else
 		return (-1);
 }
