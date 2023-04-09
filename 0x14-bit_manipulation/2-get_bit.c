@@ -40,14 +40,16 @@ void to_bit(unsigned long int n, char *str)
 int get_bit(unsigned long int n, unsigned int index)
 {
 	char bits_str[100];
-	int len = 0;
+	unsigned int len = 0;
 
 	to_bit(n, bits_str);
 	while (bits_str[len])
 		len++;
 	len--;
-	if (bits_str[index])
+	if (bits_str[index] && len >= index)
 		return (bits_str[len - index] - '0');
+	else if (len == 0)
+		return (0);
 	else
 		return (-1);
 }
