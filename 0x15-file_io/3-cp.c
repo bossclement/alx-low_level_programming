@@ -78,5 +78,7 @@ int main(int argc, char **argv)
 			print_error("Error: Can't read from file", argv[1], 98);
 		}
 	}
+	close_fp(cp);
+	close_fp(og);
 	return (0);
 }
