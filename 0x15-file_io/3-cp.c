@@ -53,15 +53,14 @@ int main(int argc, char **argv)
 	if (og == -1)
 		print_error("Error: Can't read from file", argv[1], 98);
 
-	cp = open(argv[2], O_CREAT | O_WRONLY | O_APPEND | O_TRUNC, 0664);
-	if (cp == -1)
-	{
-		close_fp(og);
-		print_error("Error: Can't write to", argv[2], 99);
-	}
-
 	while (nread  > 0)
 	{
+		cp = open(argv[2], O_CREAT | O_WRONLY | O_APPEND , 0664);
+		if (cp == -1)
+		{
+			close_fp(og);
+			print_error("Error: Can't write to", argv[2], 99);
+		}
 		nread = read(og, buffer, 1024);
 		if (nread > 0)
 		{
@@ -77,6 +76,7 @@ int main(int argc, char **argv)
 			close_fp(og);
 			print_error("Error: Can't read from file", argv[1], 98);
 		}
+		close_fp(cp);
 	}
 	return (0);
 }
