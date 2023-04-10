@@ -42,7 +42,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
 			}
 			letters -= nread;
 			characters += nread;
-		}
+		} else
+			break;
 	}
 	close(fd);
 	return (characters);
