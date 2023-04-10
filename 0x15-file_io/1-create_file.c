@@ -17,6 +17,11 @@ int create_file(const char *filename, char *text_content)
 
 	if (filename == NULL)
 		return (-1);
+	if (text_content == NULL)
+	{
+		fd = open(filename, O_CREAT | O_EXCL, 0600);
+		return (fd == -1 ? -1 : 1);
+	}
 	while (text_content[content_len] != '\0')
 		content_len++;
 	fd = open(filename, O_CREAT | O_WRONLY | O_EXCL, 0600);
