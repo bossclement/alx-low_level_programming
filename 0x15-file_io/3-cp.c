@@ -72,7 +72,11 @@ int main(int argc, char **argv)
 				print_error("Error: Can't write to", argv[2], 99);
 			}
 		} else if (nread < 0)
+		{
+			close_fp(cp);
+			close_fp(og);
 			print_error("Error: Can't read from file", argv[1], 98);
+		}
 	}
 	return (0);
 }
