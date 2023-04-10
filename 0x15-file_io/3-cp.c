@@ -37,7 +37,7 @@ void close_fp(int fp)
  * main - copies the content of a file to another file.
  * @argc: number of arguments passed
  * @argv: the arguments passed
- * Return: size of characters stored in the file
+ * Return: 0 always on success
  */
 
 int main(int argc, char **argv)
@@ -68,8 +68,8 @@ int main(int argc, char **argv)
 				close_fp(og);
 				print_error("Error: Can't write to", argv[2], 99);
 			}
-		} else
-			break;
+		} else if (nread < 0)
+			print_error("Error: Can't read from file", argv[1], 98);
 	}
 	return (0);
 }
