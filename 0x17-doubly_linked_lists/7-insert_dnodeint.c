@@ -14,8 +14,6 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
 	dlistint_t *node, *cur = *h, *prev = NULL;
 
-	if (*h == NULL && idx != 0)
-		return (NULL);
 
 	node = (dlistint_t *)malloc(sizeof(dlistint_t));
 	if (node == NULL)

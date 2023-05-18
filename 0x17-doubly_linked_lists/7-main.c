@@ -10,7 +10,7 @@
  */
 int main(void)
 {
-    dlistint_t *head;
+    dlistint_t *head, *t;
 
     head = NULL;
     add_dnodeint_end(&head, 0);
@@ -23,8 +23,9 @@ int main(void)
     add_dnodeint_end(&head, 7);
     print_dlistint(head);
     printf("-----------------\n");
-    insert_dnodeint_at_index(&head, 0, 4096);
-    print_dlistint(head);
+    t = NULL;
+    insert_dnodeint_at_index(&t, 0, 4096);
+    print_dlistint(t);
     free_dlistint(head);
     head = NULL;
     return (EXIT_SUCCESS);
