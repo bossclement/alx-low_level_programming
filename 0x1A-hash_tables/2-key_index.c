@@ -1,4 +1,4 @@
-#include "hash_tables_H"
+#include "hash_tables.h"
 
 /**
  * key_index - returns the index of the node.
