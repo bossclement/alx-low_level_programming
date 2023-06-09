@@ -2,18 +2,6 @@
 #include <stdlib.h>
 
 
-
-/**
- * free_pointer - frees merory allocated in the heap.
- * @p: pointer to that memory
-*/
-
-void free_pointer(void *p)
-{
-	if (p != NULL)
-		free(p);
-}
-
 /**
  * hash_table_create - function that creates hash table.
  * @size: the size of the array.
