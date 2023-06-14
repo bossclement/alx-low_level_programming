@@ -1,50 +1,53 @@
+#include <stdlib.h>
+#include <string.h>
 #include "hash_tables.h"
 
 /**
- * hash_table_set - adds an element in the hash table.
- * @ht: the hash table.
- * @key: the key for the new element.
- * @value: The value for the new element.
- * Return: 1 if success 0 if failed.
+ * hash_table_set - Adds or updates a key-value pair in a hash table.
+ * @ht: The hash table.
+ * @key: The key. Cannot be an empty string.
+ * @value: The value associated with the key. Must be duplicated.
+ *
+ * Return: 1 if successful, 0 otherwise.
  */
 
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	unsigned long int index = 0;
-	char *valuecopy, *keycopy;
-	hash_node_t  *bucket, *new_node;
+	unsigned long int index;
+	hash_node_t *new_node, *temp;
 
-	if (!ht || !key || !*key || !value)
+	if (ht == NULL || key == NULL || *key == '\0' || value == NULL)
 		return (0);
-
-	valuecopy = strdup(value);
-	if (!valuecopy)
-		return (0);
-
-	index = key_index((const unsigned char *)key, ht->size);
-	bucket = ht->array[index];
-
-	while (bucket)
+	index = key_index((unsigned char *)key, ht->size);
+	temp = ht->array[index];
+	while (temp != NULL)
 	{
-		if (!strcmp(key, bucket->key))
+		if (strcmp(temp->key, key) == 0)
 		{
-			free(bucket->value);
-			bucket->value = valuecopy;
+			free(temp->value);
+			temp->value = strdup(value);
+			if (temp->value == NULL)
+			return (0);
 			return (1);
 		}
-		bucket = bucket->next;
+		temp = temp->next;
 	}
-	new_node = calloc(1, sizeof(hash_node_t));
+	new_node = malloc(sizeof(hash_node_t));
 	if (new_node == NULL)
+		return (0);
+	new_node->key = strdup(key);
+	if (new_node->key == NULL)
 	{
-		free(valuecopy);
+		free(new_node);
 		return (0);
 	}
-	keycopy = strdup(key);
-	if (!keycopy)
+	new_node->value = strdup(value);
+	if (new_node->value == NULL)
+	{
+		free(new_node->key);
+		free(new_node);
 		return (0);
-	new_node->key = keycopy;
-	new_node->value = valuecopy;
+	}
 	new_node->next = ht->array[index];
 	ht->array[index] = new_node;
 	return (1);
