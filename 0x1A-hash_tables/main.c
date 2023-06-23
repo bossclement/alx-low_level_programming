@@ -12,7 +12,9 @@ int main(void)
 {
     hash_table_t *ht;
 
-    ht = hash_table_create(1024);
+    ht = hash_table_create(1);
     hash_table_set(ht, "betty", "cool");
+    hash_table_set(ht, "bettys", "cool");
+    hash_table_set(ht, "bettyss", "cool");
     return (EXIT_SUCCESS);
 }
