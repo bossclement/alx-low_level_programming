@@ -23,7 +23,7 @@ hash_table_t *hash_table_create(unsigned long int size)
 	}
 
 	while (--size)
-		hash_table[size] = NULL;
+		hash_table->array[size] = NULL;
 
 	return (hash_table);
 }
