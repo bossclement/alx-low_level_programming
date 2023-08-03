@@ -1,51 +1,22 @@
-# Makefile for building the 'school' executable
-
-# Compiler to be used
-CC = gcc
-
-# Source files (.c files)
-SRC = main.c school.c
-
-# Object files (.o files)
-OBJ = $(SRC:.c=.o)
-
-# Name of the executable
 NAME = school
-
-# Program to delete files
+CC = gcc
+SRC = main.c school.c
+OBJ = $(SRC:.c=.o)
 RM = rm -f
-
-# Your favorite compiler flags
 CFLAGS = -Wall -Werror -Wextra -pedantic
 
 .PHONY: all clean oclean fclean re
 
-# 'all' rule: Builds the executable
-all: $(NAME)
+all: $(OBJ)
+	$(CC) $(OBJ) -o $(NAME) 
 
-$(NAME): $(OBJ)
-	$(CC) $(OBJ) -o $(NAME)
-
-# 'clean' rule: Deletes Emacs and Vim temporary files along with the executable
 clean:
-	$(RM) $(OBJ) *~ $(NAME)
+	$(RM) *~ $(NAME)
 
-# 'oclean' rule: Deletes the object files
 oclean:
 	$(RM) $(OBJ)
 
-# 'fclean' rule: Deletes Emacs and Vim temporary files, the executable, and the object files
-fclean: oclean clean
+fclean: clean oclean
 
-# 're' rule: Forces recompilation of all source files
 re: fclean all
-
-# Compile .c files into .o files
-%.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@
-
-# Check if the header file m.h is present
-ifeq (,$(wildcard m.h))
-$(error m.h not found. Please create the header file before running make.)
-endif
 
