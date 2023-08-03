@@ -19,7 +19,6 @@ def island_perimeter(grid):
 			row_index = lst.index(1)
 		if lst.count(1) > width:
 			width = lst.count(1)
-		if row_index and lst[row_index] == 1:
+		if lst[row_index] == 1:
 			length += 1
 	return 2 * (width + length)
-
