@@ -11,24 +11,17 @@ def island_perimeter(grid):
 	Returns:
 		int: the perimeter of the island
 	"""
-	width = 0
-	length = 0
-	for index, lst in enumerate(grid):
-		list_length = []
-		list_width = []
-		for i in lst:
-			if list_width and not i:
-				break
-			list_width.append(i)
-		if index > len(lst) - 1:
-			break
-		for i in [x[index] for x in grid]:
-			if list_length and not i:
-				break
-			list_length.append(i)
-		if list_width.count(1) > width:
-			width = list_width.count(1)
-		if list_length.count(1) > length:
-			length = list_length.count(1)
-	return 2 * (width + length)
+	perimeter = 0
+	rows, cols = len(grid), len(grid[0])
+
+	for row in range(rows):
+		for col in range(cols):
+			if grid[row][col] == 1:
+				perimeter += 4
+
+				if row > 0 and grid[row - 1][col] == 1:
+					perimeter -= 2
+				if col > 0 and grid[row][col - 1] == 1:
+					perimeter -= 2
+	return perimeter
 
