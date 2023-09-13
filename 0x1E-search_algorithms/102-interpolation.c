@@ -1,45 +1,47 @@
-#include "search_algos.h"
+#include <stdio.h>
 
 /**
- * interpolation_search - searches for a target in a sorted integer array
- * using a specialized interpolation search technique
- * @array: pointer to the initial element of the array
- * @size: number of elements in the array
- * @value: target valueue to find
+ * interpolation_search - Search for a value in a sorted array using Interpolation Search
+ * @array: Pointer to the first element of the array
+ * @size: Number of elements in the array
+ * @value: The value to search for
  *
- * Return: the first index containing `value`, or -1 if `value` is not found or
- * `array` is NULL
+ * Return: Index of the value if found, -1 if not found or on error
  */
-
 int interpolation_search(int *array, size_t size, int value)
 {
-	size_t l = 0;
-	size_t h = size - 1;
-	size_t p;
+    size_t low = 0, high = size - 1;
 
-	if (!array)
-		return (-1);
+    if (array == NULL)
+        return (-1);
 
-	while ((array[h] != array[l]) && (value >= array[l]) && (value <= array[h]))
-	{
-		p = l + (((double)(h - l) / (array[h] - array[l]))
-			    * (value - array[l]));
-		printf("Checked array[%lu] = [%d]\n", p, array[p]);
-		if (array[p] < value)
-			l = p + 1;
-		else if (value < array[p])
-			h = p - 1;
-		else
-			return (p);
-	}
-	if (value == array[l])
-	{
-		printf("Checked array[%lu] = [%d]\n", l, array[l]);
-		return (l);
-	}
-	p = l + (((double)(h - l) / (array[h] - array[l]))
-		     * (value - array[l]));
-	printf("Checked array[%lu] is not in the expected range\n", p);
-	return (-1);
+    while (low <= high && value >= array[low] && value <= array[high])
+    {
+        if (low == high)
+        {
+            if (array[low] == value)
+                return (low);
+            return (-1);
+        }
+
+        size_t pos = low + (((double)(high - low) / (array[high] - array[low])) * (value - array[low]));
+        
+        if (pos >= size)
+        {
+            printf("Value checked array[%lu] is out of range\n", pos);
+            return (-1);
+        }
+
+        printf("Value checked array[%lu] = [%d]\n", pos, array[pos]);
+
+        if (array[pos] == value)
+            return (pos);
+
+        if (array[pos] < value)
+            low = pos + 1;
+        else
+            high = pos - 1;
+    }
+
+    return (-1);
 }
-
