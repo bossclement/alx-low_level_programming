@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <math.h>
 
 /**
  * exponential_search - Search for a value in a sorted array using Exponential Search
@@ -10,8 +11,7 @@
  */
 int exponential_search(int *array, size_t size, int value)
 {
-    size_t bound = 1, low, mid, i;
-    
+    size_t bound = 1, low, high, mid, i;
     if (array == NULL || size == 0)
         return (-1);
 
@@ -21,19 +21,19 @@ int exponential_search(int *array, size_t size, int value)
         return (0);
     }
 
+    
     while (bound < size && array[bound] < value)
     {
         printf("Value checked array[%lu] = [%d]\n", bound, array[bound]);
         bound *= 2;
     }
 
-    printf("Value found between indexes [%lu] and [%lu]\n", bound / 2, (bound < size - 1) ? bound : size - 1);
-
-    low = bound / 2, high = (bound < size - 1) ? bound : size - 1;
+    low = bound / 2;
+    high = (bound < size - 1) ? bound : size - 1;
 
     while (low <= high)
     {
-        mid = (low + high) / 2;
+        mid = low + (high - low) / 2;
 
         printf("Searching in array: ");
         for (i = low; i <= high; i++)
@@ -49,8 +49,7 @@ int exponential_search(int *array, size_t size, int value)
             printf("Found %d at index: %lu\n", value, mid);
             return (mid);
         }
-
-        if (array[mid] < value)
+        else if (array[mid] < value)
             low = mid + 1;
         else
             high = mid - 1;
@@ -58,3 +57,4 @@ int exponential_search(int *array, size_t size, int value)
 
     return (-1);
 }
+
