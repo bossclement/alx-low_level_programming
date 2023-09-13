@@ -1,48 +1,45 @@
 #include "search_algos.h"
 
 /**
- * interpolation_search - searches for a target in a sorted integer array
+ * interpolation_search - searches for a target in a sorted integer arrayay
  * using a specialized interpolation search technique
- * @array: pointer to the initial element of the array
- * @size: number of elements in the array
- * @value: target value to find
+ * @array: pointer to the initial element of the arrayay
+ * @size: number of elements in the arrayay
+ * @value: target valueue to find
  *
- * Return: the first index containing `val`, or -1 if `val` is not found or
- * `arr` is NULL
+ * Return: the first index containing `value`, or -1 if `value` is not found or
+ * `array` is NULL
  */
 
 int interpolation_search(int *array, size_t size, int value)
 {
 	size_t l = 0;
-	size_t h = sz - 1;
+	size_t h = size - 1;
 	size_t p;
-	int *arr = array;
-	size_t sz = size;
-	int vl = value;
 
-	if (!arr)
+	if (!array)
 		return (-1);
 
-	while ((arr[h] != arr[l]) && (val >= arr[l]) && (val <= arr[h]))
+	while ((array[h] != array[l]) && (value >= array[l]) && (value <= array[h]))
 	{
-		p = l + (((double)(h - l) / (arr[h] - arr[l]))
-			    * (val - arr[l]));
-		printf("Checked arr[%lu] = [%d]\n", p, arr[p]);
-		if (arr[p] < val)
+		p = l + (((double)(h - l) / (array[h] - array[l]))
+			    * (value - array[l]));
+		printf("Checked array[%lu] = [%d]\n", p, array[p]);
+		if (array[p] < value)
 			l = p + 1;
-		else if (val < arr[p])
+		else if (value < array[p])
 			h = p - 1;
 		else
 			return (p);
 	}
-	if (val == arr[l])
+	if (value == array[l])
 	{
-		printf("Checked arr[%lu] = [%d]\n", l, arr[l]);
+		printf("Checked array[%lu] = [%d]\n", l, array[l]);
 		return (l);
 	}
-	p = l + (((double)(h - l) / (arr[h] - arr[l]))
-		     * (val - arr[l]));
-	printf("Checked arr[%lu] is not in the expected range\n", p);
+	p = l + (((double)(h - l) / (array[h] - array[l]))
+		     * (value - array[l]));
+	printf("Checked array[%lu] is not in the expected range\n", p);
 	return (-1);
 }
 
