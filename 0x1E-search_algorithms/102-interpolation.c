@@ -1,10 +1,10 @@
 #include "search_algos.h"
 
 /**
- * interpolation_search - searches for a target in a sorted integer arrayay
+ * interpolation_search - searches for a target in a sorted integer array
  * using a specialized interpolation search technique
- * @array: pointer to the initial element of the arrayay
- * @size: number of elements in the arrayay
+ * @array: pointer to the initial element of the array
+ * @size: number of elements in the array
  * @value: target valueue to find
  *
  * Return: the first index containing `value`, or -1 if `value` is not found or
